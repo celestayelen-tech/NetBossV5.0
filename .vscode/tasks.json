@@ -1,0 +1,33 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe compilar archivo activo",
+			"command": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
+			"args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-liphlpapi",
+                "-lws2_32",
+                "-lgdi32",
+                "-mwindows"
+            ],
+
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compilador: C:\\msys64\\ucrt64\\bin\\gcc.exe"
+		}
+	]
+}
